@@ -1,7 +1,6 @@
 # PrimeLine@DravidianLangTech 2026: Hope Speech Detection in Tulu Using XLM-RoBERTa
 
-**Authors:** Rithikaa V, Sanjay Krishnan K, Nithya Varshini C N R
-**Guide:** S. Sumathi
+**Authors:** Rithikaa V, Sanjay Krishnan K, Nithya Varshini C N R, S. Sumathi
 **Institution:** Department of Information Technology, St. Joseph's College of Engineering
 **Shared Task:** DravidianLangTech@ACL 2026 — Hope Speech Detection in Tulu
 
@@ -22,16 +21,16 @@ The research paper is available in the `paper/` folder in both `.pdf` and `.tex`
 ```
 ├── README.md
 ├── paper/
-│   ├── hope_speech_v_final.tex       # LaTeX source file
-│   ├── hope_custom.bib               # Bibliography file
-│   └── hope_speech_detection.pdf     # Final paper PDF
+│   ├── hope_speech.tex               # LaTeX source file
+│   ├── references.bib                # Bibliography file
+│   └── hope_speech_detection_paper.pdf  # Final paper PDF
 ├── track1/
-│   ├── Task1.ipynb                   # Training and inference notebook (Track 1)
+│   ├── task1.ipynb                   # Training and inference notebook (Track 1)
 │   ├── train_CG.csv                  # Training data — Coarse-Grained
 │   ├── dev_CG.csv                    # Validation data — Coarse-Grained
 │   ├── test_data_withoutlabelCG.csv  # Test data (without labels)
-│   └── PrimeLine_Tulu_task1.csv      # Submitted predictions
-└── track2/
+│   └── PrimeLine_Tulu_Task1.csv      # Submitted predictions
+└── Track2/
     ├── Task2.ipynb                   # Training and inference notebook (Track 2)
     ├── Finegrained_train_data.csv    # Training data — Fine-Grained
     ├── Finegrained_dev_data.csv      # Validation data — Fine-Grained
@@ -93,10 +92,10 @@ pip install torch transformers pandas scikit-learn numpy
 
 ## How to Run
 
-1. Open `track1/Task1.ipynb` in **Google Colab** (recommended, as it provides GPU support).
+1. Open `track1/task1.ipynb` in **Google Colab** (recommended, as it provides GPU support).
 2. Upload the corresponding CSV files from the `track1/` folder.
 3. Run all cells in the notebook to perform training, evaluation, and prediction.
-4. Repeat the same process with `track2/Task2.ipynb` for the fine-grained classification task.
+4. Repeat the same process with `Track2/Task2.ipynb` for the fine-grained classification task.
 
 Training experiments were conducted using **Google Colab with an NVIDIA T4 GPU**, for **2 epochs with batch size 8**, using the **AdamW optimizer** (learning rate = `2e-5`, weight decay = `0.01`).
 
@@ -109,7 +108,7 @@ If you use this work, please cite our paper:
 ```bibtex
 @inproceedings{primeline-hope-tulu-2026,
   title     = {PrimeLine@DravidianLangTech 2026: Hope Speech Detection in Tulu Using XLM-RoBERTa for Coarse and Fine-Grained Classification},
-  author    = {Rithikaa V and Sanjay Krishnan K and Nithya Varshini C N R},
+  author    = {Rithikaa V and Sanjay Krishnan K and Nithya Varshini C N R and S. Sumathi},
   booktitle = {Proceedings of the Sixth Workshop on Speech, Vision, and Language Technologies for Dravidian Languages},
   year      = {2026},
   publisher = {Association for Computational Linguistics}
